@@ -1,0 +1,39 @@
+INDUSTRY,salary,Gender
+Mining,2326.5,F
+Manufacturing,1356.2,F
+"Electricity, gas, water and waste services",1846.6,F
+Construction,1505.3,F
+Wholesale trade,1486.3,F
+Retail trade,1271.5,F
+Accommodation and food services,1179.2,F
+"Transport, postal and warehousing",1574.9,F
+Information media and telecommunications,1817.3,F
+Finance and insurance services,1905.1,F
+"Rental, hiring and real estate services",1340.8,F
+"Professional, scientific and technical services",1803.7,F
+Administrative and support services,1458.3,F
+Public administration and safety,1798.3,F
+Education and training,1808.1,F
+Health care and social assistance,1670.0,F
+Arts and recreation services,1525.6,F
+Other services,1341.5,F
+All industries,1639.7,F
+Mining,2863.3,M
+Manufacturing,1684.7,M
+"Electricity, gas, water and waste services",2257.8,M
+Construction,1917.3,M
+Wholesale trade,1686.0,M
+Retail trade,1386.6,M
+Accommodation and food services,1311.3,M
+"Transport, postal and warehousing",1880.0,M
+Information media and telecommunications,2150.5,M
+Finance and insurance services,2346.3,M
+"Rental, hiring and real estate services",1712.6,M
+"Professional, scientific and technical services",2266.8,M
+Administrative and support services,1773.9,M
+Public administration and safety,1969.0,M
+Education and training,1998.0,M
+Health care and social assistance,2012.4,M
+Arts and recreation services,1620.8,M
+Other services,1536.4,M
+All industries,1910.1,M
