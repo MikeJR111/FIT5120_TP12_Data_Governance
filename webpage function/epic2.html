@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Dashboards</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #dashboardList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #333;
+            box-sizing: border-box;
+        }
+        #dashboardList li {
+            cursor: pointer;
+            padding: 15px 25px;
+            background-color: #333;
+            color: #fff;
+        }
+        #dashboardList li:hover,
+        #dashboardList li.active {
+            background-color: #555;
+        }
+        #dashboardContainer {
+            width: 100%;
+            height: calc(60vh);
+            overflow: auto;
+        }
+        #insights {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="dashboardList">
+        <li onclick="showDashboard('dashboard1')" class="active">Dashboard 1</li>
+        <li onclick="showDashboard('dashboard2')">Dashboard 2</li>
+        <li onclick="showDashboard('dashboard3')">Dashboard 3</li>
+        <li onclick="showDashboard('dashboard4')">Dashboard 4</li>
+        <li onclick="showDashboard('dashboard5')">Dashboard 5</li>
+    </ul>
+    <div id="dashboardContainer"></div>
+    <div id="insights"></div>
+
+    <script>
+        const tableauEmbedCode = {
+            dashboard1: {
+                iframe: '<iframe src="https://your-tableau-server/views/dashboard1?:embed=y&:display_count=yes" width="100%" height="100%"></iframe>',
+                insights: 'Data insights for Dashboard 1...',
+            },
+            dashboard2: {
+                iframe: '<iframe src="https://your-tableau-server/views/dashboard2?:embed=y&:display_count=yes" width="100%" height="100%"></iframe>',
+                insights: 'Data insights for Dashboard 2...',
+            },
+            dashboard3: {
+                iframe: '<iframe src="https://your-tableau-server/views/dashboard3?:embed=y&:display_count=yes" width="100%" height="100%"></iframe>',
+                insights: 'Data insights for Dashboard 3...',
+            },
+            dashboard4: {
+                iframe: '<iframe src="https://your-tableau-server/views/dashboard4?:embed=y&:display_count=yes" width="100%" height="100%"></iframe>',
+                insights: 'Data insights for Dashboard 4...',
+            },
+            dashboard5: {
+                iframe: '<iframe src="https://your-tableau-server/views/dashboard5?:embed=y&:display_count=yes" width="100%" height="100%"></iframe>',
+                insights: 'Data insights for Dashboard 5...',
+            },
+        };
+
+        function showDashboard(dashboardKey) {
+            const dashboardContainer = document.getElementById('dashboardContainer');
+            const insightsContainer = document.getElementById('insights');
+            dashboardContainer.innerHTML = tableauEmbedCode[dashboardKey].iframe || '';
+            insightsContainer.innerHTML = tableauEmbedCode[dashboardKey].insights || '';
+
+            // Update the active dashboard name style
+            const dashboardListItems = document.querySelectorAll('#dashboardListli');
+            dashboardListItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('onclick') === showDashboard('${dashboardKey}')) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    // Show the first dashboard on page load
+    showDashboard('dashboard1');
+</script>
+</body>
+</html>
+
+
+
+<div class='tableauPlaceholder' id='viz1682943782820' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;paygapmeasures&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='paygapmeasures&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;paygapmeasures&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-CN' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1682943782820');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
